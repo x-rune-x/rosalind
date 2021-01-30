@@ -1,3 +1,3 @@
-# Rosalind repository
+# Finding a motif in DNA
 
-This stores code for various problems found on the Rosalind.com bioinformatics website.
+This stores code for the SUBS problem on the bioinformatics website Rosalind.com
