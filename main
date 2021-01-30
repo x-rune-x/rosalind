@@ -1,0 +1,28 @@
+def find_motif(s, motif):
+    positions = []
+
+    for index1 in range(len(s)-len(motif)):
+        add_list = False
+        for index2 in range(len(motif)):
+            if motif[index2] == s[index1+index2]:
+                add_list = True
+            else:
+                add_list = False
+                break
+        if add_list is True:
+            positions.append(index1+1)
+
+    return positions
+
+
+file = open("rosalind_subs.txt", "r")
+dna_string = file.readline()
+dna_motif = "CAGGCTACA"
+motif_positions = find_motif(dna_string, dna_motif)
+
+output_string = ""
+for position in motif_positions:
+    output_string += f"{position} "
+
+print(motif_positions)
+print(output_string)
